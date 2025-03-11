@@ -1,0 +1,19 @@
+
+    tailwind.config = {
+      theme: {
+        colors: {
+          mycolor: '#da373d',
+        }
+      },
+    }
+   
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mycolor: '#da373d',
+          },
+        },
+      },
+    }
+   

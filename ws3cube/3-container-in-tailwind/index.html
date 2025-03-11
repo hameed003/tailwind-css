@@ -9,21 +9,23 @@
 </head>
 
 <body>
-  <div class="container bg-gray-800 p-5 my-10 mx-auto rounded-2xl">
-    <h1 class="text-green-400 text-4xl">
+  <div class="container bg-mycolor text-white p-5 my-10 mx-auto rounded-2xl">
+    <h1 class="text-white text-4xl">
       Container in Tailwind CSS Using CDN
     </h1>
   </div>
 </body>
 
 <script>
-  //✅ Reference Link : https://tailwindcss.com/docs/container
+  //✅ Reference Link : https://tailwindcss.com/docs/screens
 
   //✅ Edit the tailwind.config object to customize your configuration with your own design tokens.
+
+  /////////////////////////////////////////////////////////////
+  //✅ Break Points Type 1:
+  //✅ Adding a new custom smaller breakpoints:
   tailwind.config = {
     theme: {
-
-      //✅ Adding smaller breakpoints:
       screens: {
         //✅ Custom screen added ( new )
         'xs': '475px',
@@ -47,39 +49,64 @@
         // => @media (min-width: 1536px) { ... }
       }
     },
+  }
+  ///////////////////////////////////////////////////////
+  //✅ Break Points Type 2:
+  // ✅Overriding the defaults Screens, here the tailwind's default screens valued for the screens like sm, md, lg etc will be overridden by the below values.:
+  tailwind.config = {
+    theme: {
 
-    // ✅Overriding the defaults Screen:
 
-    // screens: {
-    //   'sm': '576px',
-    //   // => @media (min-width: 576px) { ... }
-
-    //   'md': '960px',
-    //   // => @media (min-width: 960px) { ... }
-
-    //   'lg': '1440px',
-    //   // => @media (min-width: 1440px) { ... }
-    // },
-
-    extend: {
-
-      //✅ Overriding a single screen:
-      // screens: {
-      //   'lg': '992px',
-      //   // => @media (min-width: 992px) { ... }
-      // },
-
-      //✅ Adding larger breakpoints: ( not working )
       screens: {
-        '3xl': '1600px',
+        'sm': '576px',
+        // => @media (min-width: 576px) { ... }
+
+        'md': '960px',
+        // => @media (min-width: 960px) { ... }
+
+        'lg': '1440px',
+        // => @media (min-width: 1440px) { ... }
       },
-      colors: {
-        //✅ this custom color will not apply if we use it on any breakpoints like ( sm, md, lg etc ), for that we have to use Tailwind's predefined color clasess.
-        mycolor: '#da373d',
+    }
+  }
+  ///////////////////////////////////////////////////////
+  //✅ Break Points Type 3:
+  //✅ Extending a new custom screen to the Tailwind's default screens, here we will be able to use the tailwind's default screens like ( sm, md, lg etc ) along with the new custom screens like ( 3xl, 4xl etc ):
+  tailwind.config = {
+    theme: {
+      extend: {
+
+        screens: {
+          '3xl': '1600px',
+          // => @media (min-width: 1600px) { ... }
+        },
       }
-    },
+    }
   }
 
+  ////////////////////////////////////////////////////////
+  //✅ Break Points Type 4:
+  //✅ Adding a new custom larger breakpoints: ( not working )
+  tailwind.config = {
+    theme: {
+      screens: {
+        //✅ Custom screen added ( new )
+        '4xl': '1900px',
+      },
+    }
+  }
+
+  ///////////////////////////////////////////////////////////
+  //✅ Insert custom color in the tailwind.config object:
+  tailwind.config = {
+    theme: {
+      //✅ this custom color will not apply if we use it on any breakpoints like ( sm, md, lg etc ), for that we have to use Tailwind's predefined color classes.
+      colors: {
+        mycolor: '#da373d',
+        white: '#ffffff'
+      }
+    }
+  }
 </script>
 
 </html>

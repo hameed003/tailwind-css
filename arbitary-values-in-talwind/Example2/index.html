@@ -12,7 +12,7 @@
   <h1 class="text-4xl text-green-600 text-center m-20 bg-orange-200 p-4">Arbitrary Variants in Tailwind</h1>
   <!-- First Variant  -->
   <div class="group bg-green-200 m-20 p-5">
-    <ul class="group-hover:[&>li]:text-red-500">
+    <ul class="group-hover:[&>li]:text-red-500 bg-gray-100">
       <li>Item 1</li>
       <li>Item 2</li>
       <li>Item 3</li>
@@ -25,7 +25,8 @@
   <div class="group bg-red-200 m-20 p-5">
     <div class="bg-green-200 p-5">
       <div class="bg-blue-200  p-5">
-        <ul class="group-hover:[&>li]:text-red-500 hover:translate-x-[50px] transition-transform duration-500">
+        <ul
+          class="group-hover:[&>li]:text-red-500 bg-gray-100 hover:translate-x-[50px] transition-transform duration-500">
           <li>Item 1</li>
           <li>Item 2</li>
           <li>Item 3</li>
@@ -38,7 +39,8 @@
   <div class="group bg-red-200 m-20 p-5">
     <div class="bg-green-200 p-5">
       <div class="bg-blue-200  p-5">
-        <ul class="group-hover:[&>li]:text-red-500 group-hover:translate-x-[50px] transition-transform duration-500">
+        <ul
+          class="group-hover:[&>li]:text-red-500 bg-gray-100 group-hover:translate-x-[50px] transition-transform duration-500">
           <li>Item 1</li>
           <li>Item 2</li>
           <li>Item 3</li>
@@ -65,7 +67,7 @@
   <!-- 3: Arbitrary Variants for States: -->
   <!-- Example: group-hover:[&>li]:text-red-500 changes text color to red when the parent group is hovered. -->
 
-  <!-- 3: Arbitrary Variants for Attribute Selectors: -->
+  <!-- 4: Arbitrary Variants for Attribute Selectors: -->
   <!-- Example: [data-active=true]:bg-green-500 applies a green background to elements with data-active="true". -->
 </body>
 
